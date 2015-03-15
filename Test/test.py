@@ -1,3 +1,5 @@
+# additions chahiye
+
 import pygame, sys
 from pygame.locals import *
 
