@@ -1,6 +1,7 @@
 # additions chahiye
 # aur dalna
 # zyada chahiye, acha nahi banra
+# bas
 
 import pygame, sys
 from pygame.locals import *
