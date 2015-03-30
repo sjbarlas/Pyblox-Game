@@ -1,6 +1,6 @@
 # kuch likhna hai yahan
 # still likhna hai yahan
-# kahin
+# kahin, kya kaha
 
 import pygame, sys
 from pygame.locals import *
