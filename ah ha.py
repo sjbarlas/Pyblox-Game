@@ -22,3 +22,20 @@ class Block(pygame.sprite.Sprite):
         self.rect = self.image.get_Rect()
         self.rect.x = x
         self.rect.y = y
+
+class Ball(pygame.sprite.Sprite):
+    speed = 10.0
+    x = 0.0
+    y = 180.0
+    direction = 200
+    width = 10
+    height = 10
+
+    def __intit__(self):
+        super().__init__()
+        self.image = pygame.Surface([self.width, self.height])
+        self.image.fill(c1)
+        self.rect = self.image.get_rect()
+        self.screenheight = pygame.display.get_surface().get_height()
+        self.screenwidth = pygame.display.get_surface().get_width()
+        
