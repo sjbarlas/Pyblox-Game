@@ -81,3 +81,12 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.screenheight = pygame.display.get_surface().get_height()
         self.screenwidth = pygame.display.get_surface().get_width()
+
+        self.rect.x = 0
+        self.rect.y = self.screenheight-self.height
+     
+    def update(self):
+        pos = pygame.mouse.get_pos()
+        self.rect.x = pos[0]
+        if self.rect.x > self.screenwidth - self.width:
+            self.rect.x = self.screenwidth - self.width
