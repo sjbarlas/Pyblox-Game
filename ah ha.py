@@ -11,6 +11,9 @@ c1 = (255, 255, 255)
 c2 = (0, 0, 0)
 c3 = (0, 0, 255)
 
+block_width = 30
+block_height = 30
+
 class Block(pygame.sprite.Sprite):
     def __init__(self, color, x, y):
         super() .__init__()
