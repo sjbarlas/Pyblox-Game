@@ -1,12 +1,12 @@
 import math
 import pygame
  
-black = (255, 255, 255)
-white = (0, 0, 0)
+white = (255, 255, 255)
+black = (0, 0, 0)
 blue = (0, 0, 255)
  
-block_width = 30
-block_height = 30
+block_width = 50
+block_height = 10
  
 class Block(pygame.sprite.Sprite):
  
