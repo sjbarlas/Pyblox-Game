@@ -7,6 +7,21 @@ pygame.mouse.set_visible(0)
 font = pygame.font.Font(None, 36)
 background = pygame.Surface(screen.get_size())
 
+blocks = pygame.sprite.Group()
+balls = pygame.sprite.Group()
+allsprites = pygame.sprite.Group()
+
+play = Player()
+allsprites.add(player)
+
+ball = Ball()
+allsprites.add(ball)
+balls.add(ball)
+
+top = 80
+
+blockcount = 32
+
 c1 = (255, 255, 255)
 c2 = (0, 0, 0)
 c3 = (0, 0, 255)
