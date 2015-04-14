@@ -68,3 +68,16 @@ class Ball(pygame.sprite.Sprite):
             return True
         else:
             return False
+
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+         
+        self.width = 75
+        self.height = 15
+        self.image = pygame.Surface([self.width, self.height])
+        self.image.fill((white))
+         
+        self.rect = self.image.get_rect()
+        self.screenheight = pygame.display.get_surface().get_height()
+        self.screenwidth = pygame.display.get_surface().get_width()
