@@ -4,7 +4,7 @@ import pygame
 pink = (255, 20, 147)
 brue = (0, 191, 255)
 black = (0, 0, 0)
-blue = (0, 0, 255)
+green = (124, 252, 0)
 red = (255, 0, 0)
  
 block_width = 50
@@ -129,7 +129,7 @@ blockcount = 32
  
 for row in range(5):
     for column in range(0, blockcount):
-        block = Block(blue, column * (block_width + 2) + 1, top)
+        block = Block(green, column * (block_width + 2) + 1, top)
         blocks.add(block)
         allsprites.add(block)
     top += block_height + 2
