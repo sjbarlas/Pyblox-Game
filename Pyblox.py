@@ -1,11 +1,11 @@
 import math
 import pygame
  
-pink = (255, 20, 147)
-brue = (0, 191, 255)
-this = (119, 136, 153)
-green = (124, 252, 0)
-red = (255, 0, 0)
+pink = (255, 20, 147) # player
+brue = (0, 191, 255) # ball
+this = (119, 136, 153) # background
+green = (124, 252, 0) # blocks
+red = (255, 0, 0) # text
 
 # height and width of the blocks
 block_width = 50
