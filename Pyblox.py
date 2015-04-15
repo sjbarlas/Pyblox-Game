@@ -6,9 +6,10 @@ brue = (0, 191, 255)
 this = (119, 136, 153)
 green = (124, 252, 0)
 red = (255, 0, 0)
- 
+
+# height and width of the blocks
 block_width = 50
-block_height = 10
+block_height = 20
  
 class Block(pygame.sprite.Sprite):
  
