@@ -75,12 +75,10 @@ class Ball(pygame.sprite.Sprite): # ball
         else: # no bouncing
             return False
  
-class Player(pygame.sprite.Sprite):
-     
-    def __init__(self):
+class Player(pygame.sprite.Sprite): # Player
+    def __init__(self): # Constructor
         super().__init__()
-         
-        self.width = 75
+        self.width = 85
         self.height = 15
         self.image = pygame.Surface([self.width, self.height])
         self.image.fill((pink))
