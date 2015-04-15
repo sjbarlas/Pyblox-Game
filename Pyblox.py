@@ -102,17 +102,13 @@ class Player(pygame.sprite.Sprite): # Player
         if self.rect.x > self.screenwidth - self.width:
             self.rect.x = self.screenwidth - self.width
  
-pygame.init()
- 
-screen = pygame.display.set_mode([1000, 600])
- 
-pygame.display.set_caption('Pyblox Game')
- 
-pygame.mouse.set_visible(0)
- 
-font = pygame.font.Font(None, 36)
- 
-background = pygame.Surface(screen.get_size())
+pygame.init() # pygame library
+screen = pygame.display.set_mode([1000, 600]) # screen of the game
+pygame.display.set_caption('Pyblox Game') # name of the window
+pygame.mouse.set_visible(0) # mouse isn't visible on screen
+font = pygame.font.Font(None, 36) # sie of the text
+
+background = pygame.Surface(screen.get_size()) # 
  
 blocks = pygame.sprite.Group()
 balls = pygame.sprite.Group()
