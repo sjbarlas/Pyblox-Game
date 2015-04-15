@@ -15,7 +15,7 @@ class Block(pygame.sprite.Sprite): # blocks to be eliminated
  
     def __init__(self, color, x, y): # Constructor
         super().__init__()
-        self.image = pygame.Surface([block_width, block_height]) # blocks
+        self.image = pygame.Surface([block_width, block_height]) # blocks on screen
         self.image.fill(color) # filling colour
         self.rect = self.image.get_rect() # rectangle blocks
         self.rect.x = x # x position of the block
@@ -28,20 +28,17 @@ class Ball(pygame.sprite.Sprite): # ball
     # position at the start
     x = 0.0
     y = 200.0
-    direction = 300 # direction of the ball 
- 
+    direction = 150 # direction of the ball 
     width = 10
     height = 10
 
-    def __init__(self):
+    def __init__(self): # Constructor
         super().__init__()
-
-        self.image = pygame.Surface([self.width, self.height])
-         
-        self.image.fill(brue)
-         
-        self.rect = self.image.get_rect()
-         
+        self.image = pygame.Surface([self.width, self.height]) # ball on screen
+        self.image.fill(brue) # blue colour
+        self.rect = self.image.get_rect() # shape of rect
+        
+        # screen attributes
         self.screenheight = pygame.display.get_surface().get_height()
         self.screenwidth = pygame.display.get_surface().get_width()
      
