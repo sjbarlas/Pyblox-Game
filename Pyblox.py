@@ -13,13 +13,13 @@ block_height = 20
  
 class Block(pygame.sprite.Sprite): # blocks to be eliminated
  
-    def __init__(self, color, x, y):
+    def __init__(self, color, x, y): # Constructor
         super().__init__()
-        self.image = pygame.Surface([block_width, block_height])
-        self.image.fill(color)
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
+        self.image = pygame.Surface([block_width, block_height]) # blocks
+        self.image.fill(color) # filling colour
+        self.rect = self.image.get_rect() # rectangle blocks
+        self.rect.x = x # x position of the block
+        self.rect.y = y # y position of the block
  
  
 class Ball(pygame.sprite.Sprite):
