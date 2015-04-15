@@ -22,11 +22,13 @@ class Block(pygame.sprite.Sprite): # blocks to be eliminated
         self.rect.y = y # y position of the block
  
  
-class Ball(pygame.sprite.Sprite):
-    speed = 10.0
+class Ball(pygame.sprite.Sprite): # ball
+    speed = 12.3 # ball speed
+
+    # position at the start
     x = 0.0
-    y = 180.0
-    direction = 200
+    y = 200.0
+    direction = 300 # direction of the ball 
  
     width = 10
     height = 10
