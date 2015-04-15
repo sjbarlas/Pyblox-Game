@@ -134,7 +134,7 @@ for row in range(5): # number of blocks rows
         block = Block(green, column * (block_width + 20) + 30, top)
         blocks.add(block)
         allsprites.add(block)
-    top += block_height + 2
+    top += block_height + 8 # distance between each block
  
 clock = pygame.time.Clock()
 game_over = False
