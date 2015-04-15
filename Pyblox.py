@@ -134,39 +134,38 @@ for row in range(5): # number of blocks rows
         block = Block(green, column * (block_width + 20) + 30, top)
         blocks.add(block)
         allsprites.add(block)
+        
     top += block_height + 8 # distance between each block
- 
+
+# for speed 
 clock = pygame.time.Clock()
+
+# checking for game
 game_over = False
- 
+
+# checking to exit
 exit_program = False
  
-
 while exit_program != True:
- 
-    clock.tick(30)
- 
-    screen.fill(this)
+    clock.tick(35) # FPS
+    screen.fill(this) # clearing screen
      
-    for event in pygame.event.get():
+    for event in pygame.event.get(): # for game over
         if event.type == pygame.QUIT:
             exit_program = True
      
-    if not game_over:
-
+    if not game_over: # keep on playing if nto game over
         player.update()
         game_over = ball.update()
      
-    if game_over:
+    if game_over: # when game is over
         text = font.render("Game Over > Restart to play again", True, red)
         textpos = text.get_rect(centerx=background.get_width()/2)
         textpos.top = 300 # from the top
         screen.blit(text, textpos)
      
     if pygame.sprite.spritecollide(player, balls, False):
-
         diff = (player.rect.x + player.width/2) - (ball.rect.x+ball.width/2)
-
         ball.rect.y = screen.get_height() - player.rect.height - ball.rect.height - 1
         ball.bounce(diff)
      
