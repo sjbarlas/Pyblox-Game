@@ -78,16 +78,20 @@ class Ball(pygame.sprite.Sprite): # ball
 class Player(pygame.sprite.Sprite): # Player
     def __init__(self): # Constructor
         super().__init__()
+        
+        # width and height of the player block at the bottom
         self.width = 85
         self.height = 15
         self.image = pygame.Surface([self.width, self.height])
-        self.image.fill((pink))
-         
+        self.image.fill((pink)) # colour pink
         self.rect = self.image.get_rect()
+        
+        # placing on the screen
         self.screenheight = pygame.display.get_surface().get_height()
         self.screenwidth = pygame.display.get_surface().get_width()
- 
-        self.rect.x = 0
+        
+        # window opens
+        self.rect.x = -10 
         self.rect.y = self.screenheight-self.height
      
     def update(self):
