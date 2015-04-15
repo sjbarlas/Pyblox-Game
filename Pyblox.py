@@ -1,6 +1,7 @@
 import math
 import pygame
- 
+
+# colours
 pink = (255, 20, 147) # player
 brue = (0, 191, 255) # ball
 this = (119, 136, 153) # background
@@ -12,7 +13,6 @@ block_width = 50
 block_height = 20
  
 class Block(pygame.sprite.Sprite): # blocks to be eliminated
- 
     def __init__(self, color, x, y): # Constructor
         super().__init__()
         self.image = pygame.Surface([block_width, block_height]) # blocks on screen
