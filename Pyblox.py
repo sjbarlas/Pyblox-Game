@@ -11,7 +11,7 @@ red = (255, 0, 0) # text
 block_width = 50
 block_height = 20
  
-class Block(pygame.sprite.Sprite):
+class Block(pygame.sprite.Sprite): # blocks to be eliminated
  
     def __init__(self, color, x, y):
         super().__init__()
