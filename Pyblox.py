@@ -167,20 +167,21 @@ while exit_program != True:
     if pygame.sprite.spritecollide(player, balls, False): # ball hitting the player
         # ball being deflected in different directons by the player
         diff = (player.rect.x + player.width/2) - (ball.rect.x+ball.width/2)
+
+        # ball's y position if hit by the player
         ball.rect.y = screen.get_height() - player.rect.height - ball.rect.height - 1
         ball.bounce(diff)
-     
+        
+    # collisions between ball and blocks 
     deadblocks = pygame.sprite.spritecollide(ball, blocks, True)
      
-    if len(deadblocks) > 0:
+    if len(deadblocks) > 0: # bounce ball if hit
         ball.bounce(0)
-         
 
+        # game ends if no blocks left
         if len(blocks) == 0:
             game_over = True
 
-    allsprites.draw(screen)
-
-    pygame.display.flip()
- 
-pygame.quit()
+    allsprites.draw(screen) # drawing on screen
+    pygame.display.flip() # show what's being drawn
+pygame.quit() # quitting from the game
