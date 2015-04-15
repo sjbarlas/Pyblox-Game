@@ -1,9 +1,11 @@
 import math
 import pygame
  
-white = (255, 255, 255)
+pink = (255, 20, 147)
+brue = (0, 191, 255)
 black = (0, 0, 0)
 blue = (0, 0, 255)
+red = (255, 0, 0)
  
 block_width = 50
 block_height = 10
@@ -33,7 +35,7 @@ class Ball(pygame.sprite.Sprite):
 
         self.image = pygame.Surface([self.width, self.height])
          
-        self.image.fill(white)
+        self.image.fill(brue)
          
         self.rect = self.image.get_rect()
          
@@ -82,7 +84,7 @@ class Player(pygame.sprite.Sprite):
         self.width = 75
         self.height = 15
         self.image = pygame.Surface([self.width, self.height])
-        self.image.fill((white))
+        self.image.fill((pink))
          
         self.rect = self.image.get_rect()
         self.screenheight = pygame.display.get_surface().get_height()
@@ -154,7 +156,7 @@ while exit_program != True:
         game_over = ball.update()
      
     if game_over:
-        text = font.render("Game Over", True, white)
+        text = font.render("Game Over", True, red)
         textpos = text.get_rect(centerx=background.get_width()/2)
         textpos.top = 300
         screen.blit(text, textpos)
