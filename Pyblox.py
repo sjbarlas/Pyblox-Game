@@ -94,9 +94,11 @@ class Player(pygame.sprite.Sprite): # Player
         self.rect.x = -10 
         self.rect.y = self.screenheight-self.height
      
-    def update(self):
-        pos = pygame.mouse.get_pos()
-        self.rect.x = pos[0]
+    def update(self): # position of the player on the screen
+        pos = pygame.mouse.get_pos() # mouse's location is the player
+        self.rect.x = pos[0] # left side of player = mouse position
+        
+        # player stays on screen
         if self.rect.x > self.screenwidth - self.width:
             self.rect.x = self.screenwidth - self.width
  
