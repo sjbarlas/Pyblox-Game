@@ -3,7 +3,7 @@ import pygame
  
 pink = (255, 20, 147)
 brue = (0, 191, 255)
-black = (0, 0, 0)
+this = (119, 136, 153)
 green = (124, 252, 0)
 red = (255, 0, 0)
  
@@ -144,7 +144,7 @@ while exit_program != True:
  
     clock.tick(30)
  
-    screen.fill(black)
+    screen.fill(this)
      
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
