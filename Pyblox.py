@@ -158,7 +158,7 @@ while exit_program != True:
         game_over = ball.update()
      
     if game_over:
-        text = font.render("Game Over", True, red)
+        text = font.render("Game Over > restart to play again", True, red)
         textpos = text.get_rect(centerx=background.get_width()/2)
         textpos.top = 300
         screen.blit(text, textpos)
