@@ -52,26 +52,27 @@ class Ball(pygame.sprite.Sprite): # ball
         # changing x, y positions according to speed and direction
         self.x += self.speed * math.sin(direction_radians)
         self.y -= self.speed * math.cos(direction_radians)
-        
+
+        # position of x and y
         self.rect.x = self.x
         self.rect.y = self.y
          
-        if self.y <= 0:
+        if self.y <= 0: # bouncing from the top
             self.bounce(0)
             self.y = 1
 
-        if self.x <= 0:
+        if self.x <= 0: # bouncing from the left
             self.direction = (360 - self.direction) % 360
             self.x = 1
 
-        if self.x > self.screenwidth - self.width:
+        if self.x > self.screenwidth - self.width: # bouncing from the right
             self.direction = (360 - self.direction) % 360
             self.x = self.screenwidth - self.width - 1
             
-        if self.y > 600:
+        if self.y > 600: # out of the bottom screen
             return True
         
-        else:
+        else: # no bouncing
             return False
  
 class Player(pygame.sprite.Sprite):
