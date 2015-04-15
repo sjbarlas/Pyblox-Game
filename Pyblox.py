@@ -164,7 +164,8 @@ while exit_program != True:
         textpos.top = 300 # from the top
         screen.blit(text, textpos)
      
-    if pygame.sprite.spritecollide(player, balls, False):
+    if pygame.sprite.spritecollide(player, balls, False): # ball hitting the player
+        # ball being eflected in different directons by the player
         diff = (player.rect.x + player.width/2) - (ball.rect.x+ball.width/2)
         ball.rect.y = screen.get_height() - player.rect.height - ball.rect.height - 1
         ball.bounce(diff)
