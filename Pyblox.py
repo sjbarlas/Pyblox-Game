@@ -127,9 +127,11 @@ top = 80
 blockcount = 32
  
  
-for row in range(5):
+for row in range(5): # number of blocks rows
     for column in range(0, blockcount):
-        block = Block(green, column * (block_width + 2) + 1, top)
+        
+        # distance between top and bottom and from each other
+        block = Block(green, column * (block_width + 20) + 30, top)
         blocks.add(block)
         allsprites.add(block)
     top += block_height + 2
