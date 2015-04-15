@@ -103,7 +103,7 @@ class Player(pygame.sprite.Sprite): # Player
             self.rect.x = self.screenwidth - self.width
  
 pygame.init() # pygame library
-screen = pygame.display.set_mode([1000, 600]) # screen of the game
+screen = pygame.display.set_mode([1020, 600]) # screen of the game
 pygame.display.set_caption('Pyblox Game') # name of the window
 pygame.mouse.set_visible(0) # mouse isn't visible on screen
 font = pygame.font.Font(None, 36) # sie of the text
