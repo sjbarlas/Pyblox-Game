@@ -107,24 +107,25 @@ screen = pygame.display.set_mode([1000, 600]) # screen of the game
 pygame.display.set_caption('Pyblox Game') # name of the window
 pygame.mouse.set_visible(0) # mouse isn't visible on screen
 font = pygame.font.Font(None, 36) # sie of the text
+background = pygame.Surface(screen.get_size()) # surface for drawing
 
-background = pygame.Surface(screen.get_size()) # 
- 
+# sprite lists pygame
 blocks = pygame.sprite.Group()
 balls = pygame.sprite.Group()
 allsprites = pygame.sprite.Group()
- 
+
+# player object
 player = Player()
 allsprites.add(player)
- 
+
+# ball object
 ball = Ball()
 allsprites.add(ball)
 balls.add(ball)
 
-top = 80
- 
-blockcount = 32
- 
+# distance between the block and the top
+top = 30
+blockcount = 14 # columns of blocks on screen
  
 for row in range(5): # number of blocks rows
     for column in range(0, blockcount):
