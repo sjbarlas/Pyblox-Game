@@ -101,7 +101,7 @@ class Player(pygame.sprite.Sprite):
  
 pygame.init()
  
-screen = pygame.display.set_mode([800, 600])
+screen = pygame.display.set_mode([1000, 600])
  
 pygame.display.set_caption('Pyblox Game')
  
@@ -158,9 +158,9 @@ while exit_program != True:
         game_over = ball.update()
      
     if game_over:
-        text = font.render("Game Over > restart to play again", True, red)
+        text = font.render("Game Over > Restart to play again", True, red)
         textpos = text.get_rect(centerx=background.get_width()/2)
-        textpos.top = 300
+        textpos.top = 300 # from the top
         screen.blit(text, textpos)
      
     if pygame.sprite.spritecollide(player, balls, False):
