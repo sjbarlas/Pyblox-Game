@@ -42,19 +42,17 @@ class Ball(pygame.sprite.Sprite): # ball
         self.screenheight = pygame.display.get_surface().get_height()
         self.screenwidth = pygame.display.get_surface().get_width()
      
-    def bounce(self, diff):
-         
+    def bounce(self, diff): # bouncing from a surface
         self.direction = (180 - self.direction) % 360
         self.direction -= diff
      
-    def update(self):
-
-        direction_radians = math.radians(self.direction)
-
+    def update(self): # position of the ball on the screen
+        direction_radians = math.radians(self.direction) # conversion
+        
+        # changing x, y positions according to speed and direction
         self.x += self.speed * math.sin(direction_radians)
         self.y -= self.speed * math.cos(direction_radians)
-         
-
+        
         self.rect.x = self.x
         self.rect.y = self.y
          
